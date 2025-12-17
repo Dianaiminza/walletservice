@@ -38,9 +38,11 @@ Access Swagger UI
 http://localhost:3000/api/docs
 
 ## API Endpoints
-Method	Endpoint	Description	Body / Params / Headers
-POST	/wallets	Create a wallet	{ "currency": "Naira" }
-POST	/wallets/:id/fund	Fund a wallet	{ "amount": 500 }
-Header: Idempotency-Key optional
-POST	/wallets/transfer	Transfer funds between wallets	{ "fromWalletId": "...", "toWalletId": "...", "amount": 100 }
-GET	   /wallets/:id	  Get wallet details and transaction history	Path param: id
+
+| Method | Endpoint | Description | Request Body / Notes |
+|--------|---------|-------------|--------------------|
+| POST   | /wallets | Create a wallet | `{ "currency": "Naira" }` |
+| POST   | /wallets/:id/fund | Fund a wallet | `{ "amount": 500 }` |
+| POST   | /wallets/transfer | Transfer funds between wallets | `{ "fromWalletId": "...", "toWalletId": "...", "amount": 100 }` |
+| GET    | /wallets/:id | Get wallet details and transaction history | Path param: `id` |
+
